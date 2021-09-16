@@ -1,0 +1,29 @@
+{
+  "name": "roman-numerals-slack",
+  "version": "1.0.0",
+  "description": "Conversion of roman numerals in slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thainole/roman-numerals-slack.git"
+  },
+  "author": "Thais Illescas <thainole@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thainole/roman-numerals-slack/issues"
+  },
+  "homepage": "https://github.com/thainole/roman-numerals-slack#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "roman-numerals-tn": "^1.0.0"
+  }
+}
