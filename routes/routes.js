@@ -18,6 +18,7 @@ router.post('/', (req, res) => {
 
   const { text } = req.body;
 
+  // eslint-disable-next-line consistent-return
   const response = (num) => {
 
     if (typeof (Number(num)) === 'number' && !Number.isNaN(num)) {
@@ -28,7 +29,7 @@ router.post('/', (req, res) => {
         return err.message;
       }
 
-    } else {
+    } else if (typeof (num) === 'string') {
 
       try {
         if (num === 'help') {
