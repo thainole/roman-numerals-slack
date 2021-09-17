@@ -20,10 +20,10 @@ router.post('/', (req, res) => {
 
   const response = (num) => {
 
-    if (typeof (num) === 'number' && !Number.isNaN(num)) {
+    if (typeof (Number(num)) === 'number' && !Number.isNaN(num)) {
 
       try {
-        return stringify(num);
+        return stringify(Number(num));
       } catch (err) {
         return err.message;
       }
