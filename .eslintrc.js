@@ -11,13 +11,15 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'no-console': 'off',
     'no-undef': 'off',
+    'no-console': 'off',
     'no-unused-vars': 'off',
     'no-else-return': 'off',
     'no-multiple-empty-lines': 'off',
-    'padded-blocks': 'off',
+    'max-len': 'off',
     'comma-dangle': 'off',
-    'linebreak-style': 'off'
+    'padded-blocks': 'off',
+    'linebreak-style': 'off',
+    'consistent-return': 'off'
   },
 };

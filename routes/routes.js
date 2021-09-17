@@ -18,24 +18,15 @@ router.post('/', (req, res) => {
 
   const { text } = req.body;
 
-  // eslint-disable-next-line consistent-return
   const response = (num) => {
 
-    if (typeof (Number(num)) === 'number' && !Number.isNaN(num)) {
-
-      try {
-        return stringify(Number(num));
-      } catch (err) {
-        return err.message;
-      }
-
-    } else if (typeof (num) === 'string') {
+    if (!(Number(num))) {
 
       try {
         if (num === 'help') {
           return helpMessage;
         } else if (num === 'version') {
-          return { name, version };
+          return `${name} v${version}`;
         } else {
           return parse(num);
         }
@@ -43,8 +34,18 @@ router.post('/', (req, res) => {
         return err.message;
       }
 
+    } else if (Number(num)) {
+
+      try {
+        return stringify(Number(num));
+      } catch (err) {
+        return err.message;
+      }
+
     }
   };
+
+  console.log(response(text));
 
   res.json({
     response_type: 'in_channel',
@@ -52,5 +53,6 @@ router.post('/', (req, res) => {
   });
 
 });
+
 
 module.exports = router;
