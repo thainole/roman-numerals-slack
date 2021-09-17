@@ -45,8 +45,6 @@ router.post('/', (req, res) => {
     }
   };
 
-  console.log(response(text));
-
   res.json({
     response_type: 'in_channel',
     text: response(text)
